@@ -67,14 +67,14 @@ export default function Home() {
                 </div>
               </div>
 
-              <a href={getLoginUrl()}>
+              <Link href="/register">
                 <Button 
                   size="lg" 
                   className="brutalist-border brutalist-shadow text-2xl px-12 py-8 h-auto font-bold hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all"
                 >
                   [START PROCESSING]
                 </Button>
-              </a>
+              </Link>
             </div>
           </div>
         </main>

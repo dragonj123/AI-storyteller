@@ -8,12 +8,16 @@ import Home from "./pages/Home";
 import Upload from "./pages/Upload";
 import Dashboard from "./pages/Dashboard";
 import Query from "./pages/Query";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/login"} component={Login} />
+      <Route path={"/register"} component={Register} />
       <Route path={"/upload/:type"} component={Upload} />
       <Route path={"/query/:jobId"} component={Query} />
       <Route path={"/dashboard"} component={Dashboard} />
