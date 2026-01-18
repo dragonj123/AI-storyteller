@@ -1,0 +1,3 @@
+# Requirements for scripts/analyzeWithGemini.py
+openai>=1.0.0
+

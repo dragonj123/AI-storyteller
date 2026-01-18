@@ -1,0 +1,235 @@
+You are an expert brand strategist + product marketer + enterprise SaaS storyteller.
+
+INPUTS:
+- You will receive either:
+  (A) a transcript from a founder interview (possibly noisy), OR
+  (B) written notes / narrative text about the founder and company.
+- The input may include multiple speakers, tangents, contradictions, and missing info.
+
+TASK:
+Extract structured information and output ONE valid JSON object that fills the template below.
+- Use ONLY information supported by the input.
+- Do NOT invent facts. If missing, set the field to null and add an item to "missing_info" with a question to ask.
+- If there are contradictions, choose the best-supported version and record the alternative in "uncertainties".
+- Prefer verbatim phrases from the input for quotes and user language when possible.
+- Keep items concise but specific.
+
+OUTPUT RULES:
+- Output must be valid JSON only (no markdown, no commentary).
+- All keys must exist exactly as in the template.
+- Lists can be empty [] if nothing is found.
+- Use plain English.
+- For "sources", include short evidence snippets OR timestamps if available (e.g., "00:12:31-00:12:58") OR line references if provided.
+- Where examples are required, provide at least 3 positive and 3 negative examples if the input supports them; otherwise provide as many as supported and note missing.
+
+JSON TEMPLATE TO FILL:
+
+{
+  "meta": {
+    "company_name": null,
+    "interview_date": null,
+    "input_type": "transcript_or_notes",
+    "language_detected": null,
+    "confidence_overall": null
+  },
+
+  "layer1_brand_narrative": {
+    "brand_personality": {
+      "core_traits": [],
+      "behavior_examples": [],
+      "sources": []
+    },
+    "tone_of_voice": {
+      "tone_attributes": [],
+      "sample_sentence_patterns": [],
+      "word_preferences": [],
+      "positive_examples": [],
+      "negative_examples": [],
+      "sources": []
+    },
+    "content_boundaries": {
+      "forbidden_content": [],
+      "prohibited_style": [],
+      "past_incidents_lessons": [],
+      "sources": []
+    },
+
+    "origin_story": {
+      "trigger_moment": null,
+      "scene_details": [],
+      "insight_process": null,
+      "sources": []
+    },
+    "core_beliefs": {
+      "strong_beliefs": [],
+      "strong_disbeliefs": [],
+      "value_driven_decisions": [],
+      "wanted_company_identity": null,
+      "unwanted_company_identity": null,
+      "sources": []
+    },
+    "vision_narrative": {
+      "vision_5y": null,
+      "vision_10y": null,
+      "world_change_if_success": null,
+      "wall_sentence": null,
+      "sources": []
+    },
+
+    "value_proposition": {
+      "non_technical_value": null,
+      "metaphors_analogies": [],
+      "sources": []
+    },
+
+    "user_persona": {
+      "user_profile": null,
+      "language_preferences": [],
+      "decision_motivations": [],
+      "behavior_patterns": [],
+      "sources": []
+    },
+    "emotional_triggers": {
+      "pre_purchase_worries": [],
+      "purchase_inner_monologue": [],
+      "post_purchase_highs_pains": [],
+      "sources": []
+    },
+    "user_language": {
+      "frequent_words": [],
+      "recommendation_scripts": [],
+      "verbatim_quotes": [],
+      "sources": []
+    },
+
+    "content_strategy": {
+      "scenario_message_map": [
+        {
+          "scenario": null,
+          "audience": null,
+          "key_message": null,
+          "channel": null
+        }
+      ],
+      "platform_positioning": [
+        {
+          "platform": null,
+          "positioning": null,
+          "do": [],
+          "dont": []
+        }
+      ],
+      "content_production_rhythm": null,
+      "sources": []
+    },
+    "review_standards": {
+      "reviewers": [],
+      "review_process": null,
+      "evaluation_dimensions": [],
+      "pass_fail_criteria": [],
+      "sources": []
+    },
+    "best_practices": {
+      "top_converting_copies": [],
+      "user_approved_expressions": [],
+      "brand_feel_examples": [],
+      "sources": []
+    }
+  },
+
+  "layer2_product_tech": {
+    "feature_overview": {
+      "feature_breakdown": [],
+      "user_workflows": [],
+      "typical_use_cases": [],
+      "sources": []
+    },
+    "delivery_advantage": {
+      "true_advantages": [],
+      "competitive_differences": [],
+      "capability_boundaries": [],
+      "sources": []
+    },
+    "ai_capabilities": {
+      "ai_role_in_workflow": null,
+      "non_technical_explanation": null,
+      "differentiation_from_traditional_solutions": [],
+      "sources": []
+    },
+    "data_flywheel": {
+      "aggregated_demand": null,
+      "codified_know_how": null,
+      "centralized_data": null,
+      "synergy_explanation": null,
+      "sources": []
+    },
+    "competitive_position": {
+      "key_differences": [],
+      "objection_handling_scripts": [
+        {
+          "objection": null,
+          "response": null
+        }
+      ],
+      "why_us_answer": null,
+      "sources": []
+    }
+  },
+
+  "layer3_business_growth": {
+    "revenue_evolution": {
+      "current_model": null,
+      "future_models": [],
+      "sources": []
+    },
+    "case_studies": [
+      {
+        "customer_name_or_type": null,
+        "background": null,
+        "challenge": null,
+        "solution": null,
+        "results": null,
+        "customer_quote": null,
+        "sources": []
+      }
+    ],
+    "growth_engine": {
+      "core_metrics": [],
+      "mechanisms": [],
+      "flywheel_logic": null,
+      "sources": []
+    },
+    "market_size": {
+      "problem_scale": null,
+      "tam": null,
+      "sam": null,
+      "som": null,
+      "supporting_data": [],
+      "sources": []
+    }
+  },
+
+  "uncertainties": [
+    {
+      "topic": null,
+      "best_guess": null,
+      "alternative": null,
+      "why_uncertain": null
+    }
+  ],
+
+  "missing_info": [
+    {
+      "needed_for": null,
+      "question_to_ask": null
+    }
+  ],
+
+  "quality_checks": {
+    "no_fabrication_confirmed": true,
+    "all_keys_present": true,
+    "json_valid": true
+  }
+}
+
+NOW PROCESS THE INPUT AND OUTPUT THE JSON.

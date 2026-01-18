@@ -271,7 +271,7 @@ def main():
         # Determine output filename
         if output_file is None:
             output_file = generate_output_filename(audio_path)
-        output_file = '/Users/jasonwu/Documents/mock_output.json'
+        output_file = '/Users/jasonwu/Documents/mock_pitch_iris_output.json'
         
         # Save only the parsed JSON to file
         save_json_to_file(parsed_json, output_file)
